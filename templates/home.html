@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static from staticfiles %}
+    <meta charset="UTF-8">
+    <title>Zamna </title>
+    <link rel="shortcut icon" href="{% static 'img/avocado.png' %}"  type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Acerca de</a>
+            <a href="#">Portafolio</a>
+            <a href="#">Servicios</a>
+        </nav>
+        <section class="textos-header">
+            <h1>Z A M N A</h1>
+            <h2>...</h2>
+            <h2>No hay excusa para no ser un consumidor responsable</h2>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C80.36,148.13 277.31,-10.75 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg>
+        </div>
+    </header>
+            <main>
+                <section class="contenedor sobre-nosotros">
+                    <h2 class="titulo">Sobre nosotros</h2>
+                    <div class="contenedor-sobre-nosotros">
+                        <img src="{% static 'img/imagen1.svg' %}" class="imagen-about-us">
+                        <div class="contenido-textos">
+                            <h3><span>1</span>Hacia un consumo más informado</h3>
+                            <p>En Zamna queremos que las personas puedan tomar decisiones más informadas sobre los productos que consumen. Esto significa
+                            que puedan tener un mayor conocimiento de los componentes, impacto y repercusiones de estos productos sobre su salud y
+                            entorno.</p>
+                            <h3><span>2</span>Más cerca de tí</h3>
+                            <p>Queremos conocer un poco más acerca de tus habitos de consumo para poder darte las recomendaciones
+                            y advertencias que realmente necesites. En Zamna puedes agregar los productos de tu canasta y conocer alternativas más saludables
+                            o encaminadas a tus objetivos.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="portafolio">
+                    <div class="contenedor">
+                        <h2 class="titulo">Nuestras tecnologías</h2>
+                        <div class="galeria-port">
+                            <div class="imagen-port">
+                                <img src="{% static 'img/django.png' %}">
+                                <div class="hover-galeria">
+                                    <p>Framework de desarrollo web de código abierto escrito en Python. Lo anterior, nos permite comunicar nuestro
+	                                    back elaborado en PyTorch de manera sencilla y con un alto nivel de compatibilidad, reduciendo errores y/o algún tipo de
+	                                    bug. Lo anterior nos permite generar una aplicación robusta que integre todos sus componentes y genere un resultado de calidad.</p>
+                                </div>
+                            </div>
+                            <div class="imagen-port">
+                                <img src="{% static 'img/postgresql.png' %}">
+                                <div class="hover-galeria">
+                                    <p>Sistema de bases de datos relacional muy fiable y con cierto prestigio, que posee muchas caracterí
+                                        sticas para garantizar la integridad de los datos. Es un sistema de código abierto que nos da libertadad para definir los
+                                        tipos de datos de nuestra aplicación. Ademas es reconendado por su compatibilidad con django.</p>
+                                </div>
+                            </div>
+                            <div class="imagen-port">
+                                <img src="{% static 'img/pytorch.png' %}">
+                                <div class="hover-galeria">
+                                    <p> Libreria de código aierto de Python enfocada en machine learning, donde se pueden realizar algoritmos
+                                        de deep learning e incluso redes neuronales. Esta libreria, nos facilita la implementación de algoritmos de recomendación
+                                        que nos ayuden a resolver la problematica que estamos afrontando. Por medio de estos algoritmos, seremos capaces de dar
+                                        recomendaciones inteligentes y automaticas.</p>
+                                </div>
+                            </div>
+                            <div class="imagen-port">
+                                <img src="{% static 'img/aws.png' %}">
+                                <div class="hover-galeria">
+                                    <img src="{% static 'img/icono1.png' %}">
+                                    <p>Nuestro trabajo</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <section class="clients contenedor">
+                    <h2 class="titulo">Qué dicen nuestros usuarios</h2>
+                    <div class="cards">
+                        <div class="card">
+                            <img src="{% static 'img/face3.jpg' %}">
+                            <div class="contenido-texto-card">
+                                <h4>Ester Exposito</h4>
+                                <p>Mi experiencia utilizando Zamna ha sido increíble. Ahora siento que conozco mucho más
+                                los productos que consumo y puedo rescoger aquellos que me hagan sentir más
+                                saludable y feliz.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="{% static 'img/face4.jpg' %}">
+                            <div class="contenido-texto-card">
+                                <h4>Alejandra Gonzalez</h4>
+                                <p>Antes de usar Zamna desconocía totalmente las repercusiones negativas sobre mi salud de
+                                todo lo que consumía. Ahora puedo ser mas consciente y darle a mis hijos y familia
+                                los alimentos mas nutritivos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="about-services">
+                    <div class="contenedor">
+                        <h2 class="titulo">Nuestros servicios</h2>
+                        <div class="servicio-cont">
+                            <div class="servicio-ind">
+                                <img src="{% static 'img/canasta.svg' %}">
+                                <h3>Canasta</h3>
+                                <p>Almacena en un solo lugar el conjunto de alimentos que consumes.
+                                Esto te permite estár más consciente de lo que consumes y tener la información
+                                presente con finalidades mpedicas.</p>
+                            </div>
+                            <div class="servicio-ind">
+                                <img src="{% static 'img/reco.svg' %}">
+                                <h3>Contenido de los productos</h3>
+                                <p>Conoce de priemera mano el contenido de los productos que consumes. Informate
+                                sobre las repercusiones que tiene cada uno sobre tu salud.</p>
+                            </div>
+                            <div class="servicio-ind">
+                                <img src="{% static 'img/salud.svg' %}">
+                                <h3>Alternativas</h3>
+                                <p>Conoce alternativas a los productos que consumes para que sigas disfrutando lo
+                                que más te gusta sin comprometer tu salud.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <div class="contenedor-footer">
+                    <div class="content-foo">
+                        <h4>Santiago Bolaños</h4>
+                        <p>js.bolanos11</p>
+                    </div>
+                    <div class="content-foo">
+                        <h4>Sebastian Gomez</h4>
+                        <p>js.gomez23</p>
+                    </div>
+                    <div class="content-foo">
+                        <h4>Michel Succar</h4>
+                        <p>m.sucar</p>
+                    </div>
+                    <div class="content-foo">
+                        <h4>Santiago Tenjo</h4>
+                        <p>ds.tenjo</p>
+                    </div>
+                </div>
+                <h2 class="titulo-final">Diseño e Innovación de Productos con TI</h2>
+            </footer>
+</body>
+</html>
