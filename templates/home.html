@@ -11,12 +11,16 @@
 <body>
     <header>
         <nav>
-            <a href="/login/auth0">Inicio</a>
-            <a href="/logout">Acerca de</a>
-            <a href="#">Portafolio</a>
-            <a href="#">Servicios</a>
+            <a href="#sobre-nosotros">Sobre nosotros</a>
+            <a href="#nuestras-tecnologias">Nuestras tecnologías</a>
+            <a href="#servicios">Servicios</a>
+            <a href="/login/auth0">Log in</a>
+            <a href="/logout">Log out</a>
         </nav>
         <section class="textos-header">
+
+            <img src="{% static 'img/avocado.svg' %}">
+            <br>
             <h1>Z A M N A</h1>
             <h2>...</h2>
             <h2>No hay excusa para no ser un consumidor responsable</h2>
@@ -25,7 +29,7 @@
         </div>
     </header>
             <main>
-                <section class="contenedor sobre-nosotros">
+                <section class="contenedor sobre-nosotros" id="sobre-nosotros">
                     <h2 class="titulo">Sobre nosotros</h2>
                     <div class="contenedor-sobre-nosotros">
                         <img src="{% static 'img/imagen1.svg' %}" class="imagen-about-us">
@@ -44,7 +48,7 @@
                 </section>
 
 
-                <section class="portafolio">
+                <section class="portafolio" id="nuestras-tecnologias">
                     <div class="contenedor">
                         <h2 class="titulo">Nuestras tecnologías</h2>
                         <div class="galeria-port">
@@ -107,7 +111,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="about-services">
+                <section class="about-services" id="servicios">
                     <div class="contenedor">
                         <h2 class="titulo">Nuestros servicios</h2>
                         <div class="servicio-cont">

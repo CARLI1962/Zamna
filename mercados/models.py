@@ -9,7 +9,7 @@ class Usuario(models.Model):
     edad = models.SmallIntegerField()
     altura = models.SmallIntegerField()
     peso = models.SmallIntegerField()
-    objetivos = ArrayField(models.CharField(max_length=20, blank=False), default=list)
+    objetivos = ArrayField(models.CharField(max_length=20, blank=True), default=list)
 
     # Relacion
     productos_comprados = models.ManyToManyField('Producto', blank=True)
