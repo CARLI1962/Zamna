@@ -42,7 +42,7 @@ nav{
 
 nav > a{
     color: #fff;
-    font-weight: 300;
+    font-weight: bold;
     text-decoration: none;
     margin-right: 10px;
 }
@@ -169,6 +169,7 @@ header .textos-header{
 
 .hover-galeria p{
     color: #2c2e2c;
+    font-size: 12px;
     text-align: justify;
     padding: 5px 30px 5px 30px;
 }
@@ -230,7 +231,7 @@ header .textos-header{
 }
 
 .servicio-ind img{
-    width: 80%;
+    width: 50%;
 }
 
 .servicio-ind h3{

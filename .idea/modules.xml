@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../Chiper/.idea/Chiper.iml" filepath="$PROJECT_DIR$/../Chiper/.idea/Chiper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../202010_Arquisoft/ISIS2503-202010-S1-Canem/.idea/ISIS2503-202010-S1-Canem.iml" filepath="$PROJECT_DIR$/../../202010_Arquisoft/ISIS2503-202010-S1-Canem/.idea/ISIS2503-202010-S1-Canem.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Zamna.iml" filepath="$PROJECT_DIR$/.idea/Zamna.iml" />
     </modules>
   </component>
