@@ -21,7 +21,7 @@ class Producto(models.Model):
     descripcion = models.CharField(max_length=240)
     categoria = models.ForeignKey('Categoria', on_delete=models.CASCADE)
     #Relaciones
-    sustitutos = models.ManyToManyField('self')
+    sustitutos = models.ManyToManyField('self', blank=True)
     categoria = models.ForeignKey('Categoria', on_delete=models.CASCADE)
 
     def __str__(self):
