@@ -6,12 +6,14 @@ from django.shortcuts import  render
 from .logic.logic_productos import get_all_productos, get_products_by_name
 from .logic.logic_categoria import get_all_categorias, get_categorias_by_name
 from django.core import serializers
+from Zamna.auth0backend import getLogins
+from django.contrib.auth.decorators import login_required
 
 
 def index(request):
     return HttpResponse("Hello, world. You're at the mercados index.")
 
-
+@login_required()
 def get_all_products(request):
     productos = get_all_productos()
     productos_list = serializers.serialize('json', productos)
