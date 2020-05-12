@@ -9,10 +9,10 @@ class Usuario(models.Model):
     edad = models.SmallIntegerField()
     altura = models.SmallIntegerField()
     peso = models.SmallIntegerField()
-    objetivos = ArrayField(models.CharField(max_length=20, blank=True), default=list)
 
     # Relacion
     productos_comprados = models.ManyToManyField('Producto', blank=True)
+    objetivos = models.ManyToManyField('Objetivo', blank=True)
 
     def __str__(self):
         return self.nombre
@@ -54,3 +54,10 @@ class Categoria(models.Model):
 
     def __str__(self):
         return self.nombre
+
+
+class Objetivo (models.Model):
+    objetivo = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.objetivo
