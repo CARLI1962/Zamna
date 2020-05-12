@@ -26,6 +26,7 @@ class Producto(models.Model):
     # Relaciones
     sustitutos = models.ManyToManyField('self', blank=True)
     categoria = models.ForeignKey('Categoria', on_delete=models.CASCADE)
+
     def __str__(self):
         return self.nombre
 
