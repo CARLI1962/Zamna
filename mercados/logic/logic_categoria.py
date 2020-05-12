@@ -6,7 +6,7 @@ def get_all_categorias():
     return categorias
 
 
-def get_products_by_name(name):
+def get_categorias_by_name(name):
     categorias = Categoria.objects.all().filter(nombre__icontains=name)
     return categorias
 
