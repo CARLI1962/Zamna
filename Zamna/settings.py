@@ -107,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LOGIN_URL = '/login/auth0'
 LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = 'https://zamna.auth0.com/v2/logout?returnTo=http%3A%2F%2Flocalhost:8000'
+LOGOUT_REDIRECT_URL = 'https://zamna.auth0.com/v2/logout?returnTo=http%3A%2F%2F127.0.0.1:8000'
 SOCIAL_AUTH_TRAILING_SLASH = False
 SOCIAL_AUTH_AUTH0_DOMAIN = 'zamna.auth0.com'
 SOCIAL_AUTH_AUTH0_KEY = '0qSNaC3nOwSXBcx6Ror18VM0AfKNJQW7'
