@@ -22,6 +22,8 @@ urlpatterns = [
     path('mercados/', include('mercados.urls')),
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    path(r'', include('django.contrib.auth.urls')),
+    path(r'', include('social_django.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

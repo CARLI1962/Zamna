@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap4',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,7 @@ DATABASES = {
            'NAME': 'zamnadb',
            'USER': 'zamna',
            'PASSWORD': 'zamna123',
-           'HOST': 'localhost',
+           'HOST': 'zamnadb.ci31apxuujjk.us-east-1.rds.amazonaws.com',
            'PORT': '5432',
        }
 }
@@ -104,7 +105,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+LOGIN_URL = '/login/auth0'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = 'https://zamna.auth0.com/v2/logout?returnTo=http%3A%2F%2Flocalhost:8000'
+SOCIAL_AUTH_TRAILING_SLASH = False
+SOCIAL_AUTH_AUTH0_DOMAIN = 'zamna.auth0.com'
+SOCIAL_AUTH_AUTH0_KEY = '0qSNaC3nOwSXBcx6Ror18VM0AfKNJQW7'
+SOCIAL_AUTH_AUTH0_SECRET = 'rfhlbY-MFAQuDWAE68sIp-zn-cJq8BhFGh7dLeAzJ293dCPAUH1rWu-6NKv6qiec'
+SOCIAL_AUTH_AUTH0_SCOPE = [ 'openid', 'profile' ]
+AUTHENTICATION_BACKENDS = { 'Zamna.auth0backend.Auth0', 'django.contrib.auth.backends.ModelBackend', }
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 

@@ -42,7 +42,7 @@ nav{
 
 nav > a{
     color: #fff;
-    font-weight: bold;
+    font-weight: 300;
     text-decoration: none;
     margin-right: 10px;
 }
