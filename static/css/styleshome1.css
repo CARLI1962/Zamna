@@ -146,6 +146,12 @@ nav.opciones > a:hover{
     font-color: #ffffff;
 }
 
+.i-am-centered {
+    margin: auto;
+    max-width: 300px;
+    padding-top: 3%;
+}
+
 
 /** Footer */
 
@@ -189,4 +195,45 @@ footer{
 
 h4{
     padding 20px 20 20px 0;
+}
+
+/** Footer */
+
+footer{
+    background: #414141;
+    padding: 30px 0 20px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foo h4{
+    color: #fff;
+    border-bottom: 3px solid #f79d00;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.content-foo p{
+    color: #ccc;
+    font-size: 15px;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 15px;
+    margin: 0 0 0 0 0;
+    color: #9e9797;
 }

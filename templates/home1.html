@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   {% load static from static %}
+    {% load static from static %}
     <meta charset="UTF-8">
-    <title>Zamna</title>
+    <title>HOlAA</title>
+    <link
+     rel="stylesheet"
+     href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="shortcut icon" href="{% static 'img/avocado.png' %}"  type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'css/stylesftu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleshome1.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+<header>
         <nav>
             <a href="#sobre-nosotros">Sobre nosotros</a>
             <a href="{% url 'profile' %}">Búsqueda</a>
@@ -24,19 +27,37 @@
         </section>
         <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 333.18,146.15 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #ffffff;"></path></svg></div>
     </header>
-    <main>
-        <section class="contenedor">
-            <div class="textos-header">
-        <form method="POST" class="textos-header">
-        {%csrf_token%}
-         <br>
-            {{ form.as_ul }}
-            <button type="submit" class="btn btn-success waves-effect waves-light">Enviar
-            </button>
-        </form>
+    <div class="i-am-centered">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>Cedula </label>
+                {{ form.cedula }}
             </div>
-        </section>
-    </main>
+            <div class="form-group">
+                <label>Nombre </label>
+                {{ form.nombre}}
+            </div>
+            <div class="form-group">
+                <label>Edad </label>
+                {{ form.edad}}
+            </div>
+            <div class="form-group">
+                <label>Estatura </label>
+                {{ form.estatura}}
+            </div>
+            <div class="form-group">
+                <label>Peso</label>
+                {{ form.peso }}
+            </div>
+            <div class="form-group">
+                <label>Objetivos</label>
+                {{ form.objetivos }}
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <br><br>
+    </div>
     <footer>
         <div class="contenedor-footer">
             <div class="content-foo">

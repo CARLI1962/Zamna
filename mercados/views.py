@@ -8,7 +8,7 @@ from .logic.logic_categoria import get_all_categorias, get_categorias_by_name
 from django.core import serializers
 from Zamna.auth0backend import getLogins, get_correo
 from django.contrib.auth.decorators import login_required
-from .forms import FirstTimeUser
+from .forms import FirstTimeUser, InputForm
 from .logic.logic_usuario import create_usuario, get_usuario_correo
 from django.urls import reverse
 
@@ -103,3 +103,8 @@ def add_product_basket(request):
     usuario = get_usuario_correo(correo)
     usuario.comprados.add(producto)
     return HttpResponseRedirect(reverse('basket'))
+
+def home_view(request):
+    context ={}
+    context['form']= InputForm()
+    return render(request, "home1.html", context)
