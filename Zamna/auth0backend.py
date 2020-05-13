@@ -32,10 +32,10 @@ class Auth0(BaseOAuth2):
 def getLogins(request):
     user = request.user
     auth0user = user.social_auth.get(provider="auth0")
-    accessToken = auth0user.extra_data['access_token']
+    access_token = auth0user.extra_data['access_token']
     url = "https://zamna.auth0.com/userinfo"
-    headers = {'authorization': 'Bearer ' + accessToken}
+    headers = {'authorization': 'Bearer ' + access_token}
     resp = requests.get(url, headers=headers)
     userinfo = resp.json()
-    login= userinfo['https://zamna:auth0:com/logins_count']
-    return (login)
+    login = userinfo['https://zamna:auth0:com/logins_count']
+    return login
