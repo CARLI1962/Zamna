@@ -9,7 +9,6 @@ def home(request):
     return render(request, 'home.html')
 
 def profile(request):
-    if user.is_authenticated:
         return render(request, 'user.html')
 
 def basket(request):

@@ -63,7 +63,7 @@ header .textos-header{
 }
 
 .textos-header h1{
-    font-size: 35px;
+    font-size: 30px;
     color: #ffffff;
 }
 
@@ -154,15 +154,18 @@ nav.opciones > a:hover{
     width:150px;
 }
 
+
 .cards{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .cards .card{
-    background: #f79d00;
+    width: 48%;
+    margin-bottom: 10px;
+    background: #f7d497;
     display: flex;
-    width: 46%;
     height: 200px;
     align-items: center;
     justify-content: space-evenly;
@@ -171,17 +174,17 @@ nav.opciones > a:hover{
 }
 
 .cards .card img{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 160px;
     object-fit: cover;
     border: 3px solid #fff;
-    border-radius: 50%;
+    border-radius: 10%;
     display: block;
 }
 
 .cards .card > .contenido-texto-card{
     width: 55%;
-    color: #fff;
+    color: #000000;
 }
 
 .cards .card > .contenido-texto-card p{
