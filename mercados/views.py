@@ -85,6 +85,9 @@ def basket(request):
 def recom(request):
     return render(request, 'recom.html')
 
+@login_required()
+def components(request):
+    return render(request, 'components.html')
 
 @login_required()
 def add_product_basket(request):

@@ -15,7 +15,6 @@ body{
     max-width: 1000px;
     margin: auto;
     overflow: hidden;
-
 }
 .titulo{
     color: #f79d00;
@@ -28,7 +27,7 @@ body{
 
 header{
     width: 100%;
-    height: 250px;
+    height: 210px;
     background: #f79d00;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, hsla(137, 86%, 87%, 0.601), hsla(38, 100%, 48%, 0.601)), url(../img/portada.jpeg) ;  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right , hsla(137, 86%, 87%, 0.501), hsla(38, 100%, 48%, 0.501)), url( https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/03/06145550/FrutasyVerduras.jpg) ; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -139,59 +138,68 @@ nav.opciones > a:hover{
     text-decoration: underline;
 }
 
-/* Frase */
+/** Componentes **/
 
-.frase > h1{
-    text-align: center;
-    font-family: 'Old Standard TT', serif;
+.portafolio{
+    background: #f2f2f2;
 }
 
-/*Canasto */
-
-
-/* clients */
-
-.cesta{
-    width:150px;
-}
-
-
-.cards{
+.galeria-port{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-.cards .card{
-    width: 48%;
+.imagen-port{
+    width: 30%;
     margin-bottom: 10px;
-    background: hsla(88, 73%, 40%, 0.6);
-    display: flex;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
     height: 200px;
+    background: #ffffff;
+    vertical-align: middle;
+    justify-content: center;
+    text-align: center;
+}
+
+.imagen-port > h2{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(137, 86%, 87%, 0.95 );
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
-    border-radius: 5px;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+    flex-direction: column;
 }
 
-.cards .card img{
-    width: 120px;
-    height: 160px;
-    object-fit: cover;
-    border: 3px solid #fff;
-    border-radius: 10%;
-    display: block;
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
 }
 
-.cards .card > .contenido-texto-card{
-    width: 55%;
-    color: #000000;
+.hover-galeria img{
+    width: 50px;
 }
 
-.cards .card > .contenido-texto-card p{
-    font-weight: 300;
-    padding-top: 5px;
+.hover-galeria p{
+    color: #2c2e2c;
+    font-size: 12px;
+    text-align: justify;
+    padding: 5px 30px 5px 30px;
 }
+
+
+
 
 
 
@@ -233,8 +241,4 @@ footer{
     font-size: 15px;
     margin: 20px 0 0 0 0;
     color: #9e9797;
-}
-
-h4{
-    padding 20px 20 20px 0;
 }

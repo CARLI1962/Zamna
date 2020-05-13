@@ -154,6 +154,10 @@ nav.opciones > a:hover{
     width:150px;
 }
 
+main{
+    background: #f2f2f2;
+}
+
 
 .cards{
     display: flex;

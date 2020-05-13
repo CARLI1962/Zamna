@@ -8,6 +8,7 @@ urlpatterns = [
     path('profile/', views.profile, name='profile'),
     path('recom/', views.recom, name='recom'),
     path('profile/q', views.product_searched, name='productosLista'),
+    path('components/', views.components, name='components'),
     path('profile/basket/', views.basket, name='basket'),
     path('profile/p', views.add_product_basket, name='agregarProducto')
 ]

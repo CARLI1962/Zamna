@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static from static %}
+    <meta charset="UTF-8">
+    <title>Canasta</title>
+    <link rel="shortcut icon" href="{% static 'img/avocado.png' %}"  type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/stylescomponents.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&display=swap" rel="stylesheet">
+<body>
+    <header>
+        <nav>
+            <a href="#sobre-nosotros">Sobre nosotros</a>
+            <a href="{% url 'profile' %}">Búsqueda</a>
+            <a href="{% url 'basket' %}">Tu canasta</a>
+            <a href="/logout">Log out</a>
+        </nav>
+        <section class="textos-header">
+
+            <img src="{% static 'img/avocado.svg' %}">
+            <h1>C O C A  C O L A</h1>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 333.18,146.15 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #f2f2f2;"></path></svg></div>
+    </header>
+    <main>
+        <section class="portafolio" id="nuestras-tecnologias">
+                    <div class="contenedor">
+                        <div class="galeria-port">
+
+                            <div class="imagen-port">
+                                    <br><br><br>
+                                    <h2>Hipoclorito de sodio</h2>
+                                    <p>Cantidad: 200g</p>
+                                    <div class="hover-galeria">
+                                    <p>Da cancer</p>
+                                </div>
+                            </div>
+                            <div class="imagen-port">
+                                    <br><br><br>
+                                    <h2>Hipoclorito de sodio</h2>
+                                    <p>Cantidad: 200g</p>
+                                    <div class="hover-galeria">
+                                    <p>Da cancer</p>
+                                </div>
+                            </div>
+                            <div class="imagen-port">
+                                    <br><br><br>
+                                    <h2>Hipoclorito de sodio</h2>
+                                    <p>Cantidad: 200g</p>
+                                    <div class="hover-galeria">
+                                    <p>Da cancer</p>
+                                </div>
+                            </div>
+                            <div class="imagen-port">
+                                    <br><br><br>
+                                    <h2>Hipoclorito de sodio</h2>
+                                    <p>Cantidad: 200g</p>
+                                    <div class="hover-galeria">
+                                    <p>Da cancer</p>
+                                </div>
+                            </div>
+                            <div class="imagen-port">
+                                    <br><br><br>
+                                    <h2>Hipoclorito de sodio</h2>
+                                    <p>Cantidad: 200g</p>
+                                    <div class="hover-galeria">
+                                    <p>Da cancer</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </section>
+        <br>
+    </main>
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>Santiago Bolaños</h4>
+                <p>js.bolanos11</p>
+            </div>
+            <div class="content-foo">
+                <h4>Sebastian Gomez</h4>
+                <p>js.gomez23</p>
+            </div>
+            <div class="content-foo">
+                <h4>Michel Succar</h4>
+                <p>m.sucar</p>
+            </div>
+            <div class="content-foo">
+                <h4>Santiago Tenjo</h4>
+                <p>ds.tenjo</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">Diseño e Innovación de Productos con TI</h2>
+    </footer>
+</body>
+</html>

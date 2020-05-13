@@ -25,20 +25,39 @@
         <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 333.18,146.15 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #ffffff;"></path></svg></div>
     </header>
     <main>
-
-        <form method="POST">
+        <section class="contenedor">
+            <div class="textos-header">
+        <form method="POST" class="textos-header">
         {%csrf_token%}
          <br>
+            {{ form.id.label_cedula }}
             {{ form.as_p }}
             <button type="submit" class="btn btn-success waves-effect waves-light">Enviar
             </button>
         </form>
-
+            </div>
+        </section>
     </main>
-
-
-
-
-
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>Santiago Bolaños</h4>
+                <p>js.bolanos11</p>
+            </div>
+            <div class="content-foo">
+                <h4>Sebastian Gomez</h4>
+                <p>js.gomez23</p>
+            </div>
+            <div class="content-foo">
+                <h4>Michel Succar</h4>
+                <p>m.sucar</p>
+            </div>
+            <div class="content-foo">
+                <h4>Santiago Tenjo</h4>
+                <p>ds.tenjo</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">Diseño e Innovación de Productos con TI</h2>
+    </footer>
 </body>
 </html>
