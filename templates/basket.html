@@ -35,11 +35,12 @@
             <div class="cards">
                 {%for producto in productos%}
                 <div class="card">
-                    <img src="{{producto.imagen}}">
+                    <a href="list/{{producto.id}}"><img src="{{producto.imagen}}"></a>
                     <div class="contenido-texto-card">
-                        <h4>{{producto.nombre}}</h4>
-                        <p>{{producto.descripcion}}</p>
+                        <a href="/mercados/list/{{producto.id}}"><h4>{{producto.nombre}}</h4>
+                            <p>{{producto.descripcion}}</p></a>
                     </div>
+
                 </div>
                 {%empty%}
                 <div class="card">

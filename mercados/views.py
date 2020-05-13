@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import  render
-from .logic.logic_productos import get_all_productos, get_products_by_name, get_product_id
+from .logic.logic_productos import get_all_productos, get_products_by_name, get_product_id, get_all_components_product
 from .logic.logic_categoria import get_all_categorias, get_categorias_by_name
 from django.core import serializers
 from Zamna.auth0backend import getLogins, get_correo
@@ -11,6 +11,8 @@ from django.contrib.auth.decorators import login_required
 from .forms import FirstTimeUser, InputForm
 from .logic.logic_usuario import create_usuario, get_usuario_correo
 from django.urls import reverse
+from .logic.logic_componentes import get_all_componentes
+
 
 def index(request):
     return HttpResponse("Hello, world. You're at the mercados index.")
@@ -65,7 +67,7 @@ def usuario_create(request):
     context = {
         'form': form
     }
-    return render(request, 'firstTimeUser.html', context)
+    return render(request, 'home1.html', context)
 
 
 @login_required()
@@ -88,11 +90,19 @@ def basket(request):
 
 @login_required()
 def recom(request):
-    return render(request, 'recom.html')
+    correo = get_correo(request)
+    usuario = get_usuario_correo(correo)
+    recomendados = usuario.recomendados.all()
+    context = {'productos': recomendados}
+    return render(request, 'recom.html', context)
 
 @login_required()
-def components(request):
-    return render(request, 'components.html')
+def product_components(request, id):
+    componentes = get_all_components_product(id)
+    print(componentes)
+    producto = get_product_id(id)
+    context = {'producto': producto, 'componentes': componentes}
+    return render(request, 'components.html', context)
 
 @login_required()
 def add_product_basket(request):
@@ -104,7 +114,4 @@ def add_product_basket(request):
     usuario.comprados.add(producto)
     return HttpResponseRedirect(reverse('basket'))
 
-def home_view(request):
-    context ={}
-    context['form']= InputForm()
-    return render(request, "home1.html", context)
+

@@ -1,5 +1,5 @@
-from ..models import Producto
-
+from ..models import Producto, Producto_componente
+from .logic_componentes import get_component
 
 def get_all_productos():
     productos = Producto.objects.all()
@@ -20,3 +20,7 @@ def get_productos_sustitutos_producto(i):
 def get_product_id(i):
     producto = Producto.objects.all().get(id=i)
     return producto
+
+def get_all_components_product(i):
+    componentes = Producto_componente.objects.all().filter(producto=i)
+    return componentes

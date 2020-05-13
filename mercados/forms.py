@@ -60,4 +60,14 @@ class InputForm(forms.Form):
     edad = forms.IntegerField()
     estatura = forms.IntegerField()
     peso = forms.IntegerField()
-    objetivos = forms.MultipleChoiceField(choices = DEMO_CHOICES)
+    objetivos = forms.MultipleChoiceField(choices=DEMO_CHOICES)
+    class Meta:
+        model = Usuario
+        fields = [
+            'id',
+            'nombre',
+            'edad',
+            'altura',
+            'peso',
+            'objetivos'
+        ]
