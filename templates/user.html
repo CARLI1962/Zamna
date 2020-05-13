@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static from static %}
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="shortcut icon" href="{% static 'img/avocado.png' %}"  type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/stylesprofile.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="arriba">
+            <a>Z A M N A</a>
+        </nav>
+
+        <div class ="wave" style="height: 40px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-0.90,11.94 C232.73,73.11 280.70,69.17 501.92,8.00 L500.22,-5.81 L0.00,0.00 Z" style="stroke: none; fill: #f79d00;"></path></svg></div>
+        <nav class = "centro">
+            <a href="#sobre-nosotros">Sobre nosotros</a>
+            <a href="#nuestras-tecnologias">Tu canasta</a>
+            <a href="#servicios">Recomendaciones</a>
+        </nav>
+    </header>
+    <main>
+
+        <nav class="opciones">
+            <a class="titulo" href="#sobre-nosotros">Canasta</a>
+            <a class="titulo" href="/logout">Recomendaciones</a>
+        </nav>
+    </main>
+</body>
+</html>

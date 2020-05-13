@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'open sans';
+}
+
+.contenedor{
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+.titulo{
+    color: #f79d00;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Header */
+
+.logo{
+    height:50px;
+    width:50px;
+}
+
+.wave{
+    position: absolute;
+    width: 100%;
+}
+
+header{
+    width: 100%;
+    height: 160px; /* fallback for old browsers */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+nav.arriba{
+    text-align: center;
+    padding: 20px 60px 30px 30px;
+    background: #f79d00;
+    height: 60px;
+}
+
+nav.arriba > a{
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 0px;
+}
+
+nav.arriba > a:hover{
+    text-decoration: underline;
+}
+
+nav.centro {
+    text-align: center;
+    padding: 20px 0px 30px 0;
+    background: hsla(137, 86%, 87%, 0.701);
+    height: 60px;
+    vertical-align: middle;
+    background: linear-gradient(to right , hsla(137, 86%, 87%, 0.601), hsla(38, 100%, 48%, 0.601)), url( https://images7.alphacoders.com/105/1052311.jpg  )
+
+}
+
+nav.centro > a{
+    color: #ffffff;
+    font-weight: 400;
+    text-decoration: none;
+    margin-right: 10px;
+    vertical-align: center;
+}
+
+
+nav.centro > a:hover{
+    text-decoration: underline;
+}
+
+nav.opciones{
+    text-align: center;
+    padding: 20px 0px 0 0;
+}
+
+nav.opciones > a{
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+
+nav.opciones > a:hover{
+    text-decoration: underline;
+}
