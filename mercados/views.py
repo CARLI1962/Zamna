@@ -75,4 +75,6 @@ def product_searched(request):
     return render(request, 'user.html', context)
 
 
-
+@login_required()
+def basket(request):
+    return render(request, 'basket.html')
