@@ -46,7 +46,9 @@
 
                     <ul>
                     {%for producto in productos%}
-                        <li>{{producto.nombre}} <input class="add" type="submit" value="+" /></li>
+                        <form action="{% url 'agregarProducto' %}" method="GET">
+                            <li><input type="hidden" name="productId" value = "{{producto.id}}"> {{producto.nombre}} <input class="add" type="submit" name = '{{producto.id}}'value="+"/></li>
+                        </form>
                     {%endfor%}
                     </ul>
 

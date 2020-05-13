@@ -1,15 +1,16 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import  render
-from .logic.logic_productos import get_all_productos, get_products_by_name
+from .logic.logic_productos import get_all_productos, get_products_by_name, get_product_id
 from .logic.logic_categoria import get_all_categorias, get_categorias_by_name
 from django.core import serializers
 from Zamna.auth0backend import getLogins, get_correo
 from django.contrib.auth.decorators import login_required
 from .forms import FirstTimeUser
 from .logic.logic_usuario import create_usuario, get_usuario_correo
+from django.urls import reverse
 
 def index(request):
     return HttpResponse("Hello, world. You're at the mercados index.")
@@ -78,3 +79,14 @@ def product_searched(request):
 @login_required()
 def basket(request):
     return render(request, 'basket.html')
+
+
+@login_required()
+def add_product_basket(request):
+    productID = request.GET.get('productId')
+    print(productID)
+    producto = get_product_id(productID)
+    correo = get_correo(request)
+    usuario = get_usuario_correo(correo)
+    usuario.comprados.add(producto)
+    return HttpResponseRedirect(reverse('basket'))
