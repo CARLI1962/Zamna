@@ -7,5 +7,6 @@ urlpatterns = [
     path('list/', views.get_all_products, name='listaProductos'),
     path('profile/', views.profile, name='profile'),
     path('profile/q', views.product_searched, name='productosLista'),
+    path('profile/basket/', views.basket, name='basket'),
 
 ]

@@ -8,10 +8,6 @@ def home(request):
         return HttpResponseRedirect(reverse('profile'))
     return render(request, 'home.html')
 
-def profile(request):
-    if user.is_authenticated:
-        return render(request, 'user.html')
 
-def basket(request):
-    return render(request, 'basket.html')
+
 
