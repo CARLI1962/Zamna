@@ -3,16 +3,16 @@
 <head>
     {% load static from static %}
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Canasta</title>
     <link rel="shortcut icon" href="{% static 'img/avocado.png' %}"  type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'css/stylesprofile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stylesbasket.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&display=swap" rel="stylesheet">
 <body>
     <header>
         <nav>
             <a href="#sobre-nosotros">Sobre nosotros</a>
-            <a href="{% url 'basket' %}">Tu canasta</a>
+            <a href="#nuestras-tecnologias">Tu canasta</a>
             <a href="#servicios">Recomendaciones</a>
             <a href="/logout">Log out</a>
         </nav>
@@ -20,32 +20,37 @@
 
             <img src="{% static 'img/avocado.svg' %}">
             <br>
-            <h1>Z A M N A</h1>
-
-            <h2>Bienvenido, Santiago Bolaños Vega</h2>
+            <h1>C A N A S T A</h1>
         </section>
         <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 333.18,146.15 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #ffffff;"></path></svg></div>
     </header>
     <main>
-        <section class="contenedor busqueda">
-            <div class="contenedor-busqueda">
-                <img class="img-busqueda" src="{% static 'img/buscar1.svg' %}">
-                <div class="contenido-textos">
-                    <h1>Busca los productos que estés interesado/a en conocer:</h1>
-                    <br>
-                    <div class="box">
-                        <div class="container-1">
-                            <span class="icon"><i class="fa fa-search"></i></span>
-                            <input type="search" id="search" placeholder="Nombre del producto..." />
+        <div class="contenedor">
+            <img src="{% static 'img/arriba.svg' %}">
+        </div>
+        <section class="clients contenedor">
+                    <h2 class="titulo">Qué dicen nuestros usuarios</h2>
+                    <div class="cards">
+                        <div class="card">
+                            <img src="{% static 'img/face3.jpg' %}">
+                            <div class="contenido-texto-card">
+                                <h4>Ester Exposito</h4>
+                                <p>Mi experiencia utilizando Zamna ha sido increíble. Ahora siento que conozco mucho más
+                                los productos que consumo y puedo rescoger aquellos que me hagan sentir más
+                                saludable y feliz.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="{% static 'img/face4.jpg' %}">
+                            <div class="contenido-texto-card">
+                                <h4>Alejandra Gonzalez</h4>
+                                <p>Antes de usar Zamna desconocía totalmente las repercusiones negativas sobre mi salud de
+                                todo lo que consumía. Ahora puedo ser mas consciente y darle a mis hijos y familia
+                                los alimentos mas nutritivos.</p>
+                            </div>
                         </div>
                     </div>
-                    <br>
-                    <p>Conocer tus preferncias nos aydara a entender mejor tus hábitos de consumo y poder hacerte mejores recomendaciones</p>
-                </div>
-            </div>
-        </section>
-        <br>
-        <br>
+                </section>
     </main>
     <footer>
                 <div class="contenedor-footer">

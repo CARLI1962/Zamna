@@ -5,3 +5,6 @@ def home(request):
 
 def profile(request):
     return render(request, 'user.html')
+
+def basket(request):
+    return render(request, 'basket.html')
