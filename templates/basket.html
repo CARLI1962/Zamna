@@ -33,43 +33,23 @@
             </div>
             <div class="clients">
             <div class="cards">
-
+                {%for producto in productos%}
+                <div class="card">
+                    <img src="{{producto.imagen}}">
+                    <div class="contenido-texto-card">
+                        <h4>{{producto.nombre}}</h4>
+                        <p>{{producto.descripcion}}</p>
+                    </div>
+                </div>
+                {%empty%}
                 <div class="card">
                     <img src="{% static 'img/face3.jpg' %}">
                     <div class="contenido-texto-card">
-                        <h4>Ester Exposito</h4>
-                        <p>Mi experiencia utilizando Zamna ha sido increíble. Ahora siento que conozco mucho más los productos que consumo y puedo rescoger aquellos que me hagan sentir más saludable y feliz.</p>
+                        <h4>No has agregado ningún producto a la canasta</h4>
+                        <p>Puedes agregar un producto a la canasta dando clic <a href = "{% url 'profile' %}">aqui</a>, buscando un producto y dando clic en el simbolo mas</p>
                     </div>
                 </div>
-
-                <div class="card">
-                    <img src="{% static 'img/face4.jpg' %}">
-                    <div class="contenido-texto-card">
-                        <h4>Alejandra Gonzalez</h4>
-                        <p>Antes de usar Zamna desconocía totalmente las repercusiones negativas sobre mi salud de todo lo que consumía. Ahora puedo ser mas consciente y darle a mis hijos y familia los alimentos mas nutritivos.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="{% static 'img/face4.jpg' %}">
-                    <div class="contenido-texto-card">
-                        <h4>Alejandra Gonzalez</h4>
-                        <p>Antes de usar Zamna desconocía totalmente las repercusiones negativas sobre mi salud de todo lo que consumía. Ahora puedo ser mas consciente y darle a mis hijos y familia los alimentos mas nutritivos.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="{% static 'img/face4.jpg' %}">
-                    <div class="contenido-texto-card">
-                        <h4>Alejandra Gonzalez</h4>
-                        <p>Antes de usar Zamna desconocía totalmente las repercusiones negativas sobre mi salud de todo lo que consumía. Ahora puedo ser mas consciente y darle a mis hijos y familia los alimentos mas nutritivos.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="{% static 'img/face4.jpg' %}">
-                    <div class="contenido-texto-card">
-                        <h4>Alejandra Gonzalez</h4>
-                        <p>Antes de usar Zamna desconocía totalmente las repercusiones negativas sobre mi salud de todo lo que consumía. Ahora puedo ser mas consciente y darle a mis hijos y familia los alimentos mas nutritivos.</p>
-                    </div>
-                </div>
+                {%endfor%}
             </div>
             </div>
             <br>
