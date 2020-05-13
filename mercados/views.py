@@ -40,8 +40,8 @@ def profile(request):
     try:
         correo = get_correo(request)
         usuario = get_usuario_correo(correo)
-        print(usuario)
-        return render(request, 'user.html')
+        context = {'usuario': usuario}
+        return render(request, 'user.html', context)
     except Exception as e:
         print(e)
         return usuario_create(request)
@@ -74,7 +74,9 @@ def usuario_create(request):
 def product_searched(request):
     name = request.GET.get('searching')
     productos = get_products_by_name(name)
-    context ={'productos' : productos}
+    correo = get_correo(request)
+    usuario = get_usuario_correo(correo)
+    context ={'productos' : productos, 'usuario':usuario}
     return render(request, 'user.html', context)
 
 

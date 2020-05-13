@@ -11,7 +11,6 @@
 <body>
     <header>
         <nav>
-            <a href="#sobre-nosotros">Sobre nosotros</a>
             <a href="{% url 'basket' %}">Tu canasta</a>
             <a href="{% url 'recom' %}">Recomendaciones</a>
 
@@ -22,7 +21,7 @@
             <img src="{% static 'img/avocado.svg' %}">
             <br>
             <h1>Z A M N A</h1>
-            <h2>Bienvenido, Santiago Bolaños Vega</h2>
+            <h2>Bienvenido, {{usuario.nombre}}</h2>
         </section>
         <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 333.18,146.15 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #ffffff;"></path></svg></div>
     </header>

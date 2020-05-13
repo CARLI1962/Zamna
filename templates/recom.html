@@ -11,7 +11,6 @@
 <body>
     <header>
         <nav>
-            <a href="#sobre-nosotros">Sobre nosotros</a>
             <a href="{% url 'profile' %}">Búsqueda</a>
             <a href="{% url 'basket' %}">Tu canasta</a>
             <a href="/logout">Log out</a>
@@ -46,7 +45,7 @@
                     <img src="{% static 'img/face3.jpg' %}">
                     <div class="contenido-texto-card">
                         <h4>No hay suficiente informacion</h4>
-                        <p>Todavia no tenemos suficiente informacion sobre tu consumo y por lo tanto no hemos podido generar recomendaciones para ti. Para darte recomendaciones da clic <a href = "{% url 'profile' %}">aqui</a>, busca un producto y da clic en el simbolo mas para agregarlo</p>
+                        <p>Todavia no has registrado suficiente informacion sobre tu consumo y por lo tanto no hemos podido generar recomendaciones para ti. Para registrar mas informacion da clic <a href = "{% url 'profile' %}">aqui</a>, busca un producto y da clic en el simbolo mas para agregarlo</p>
                     </div>
                 </div>
                 {%endfor%}
