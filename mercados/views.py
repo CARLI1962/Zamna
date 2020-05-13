@@ -78,7 +78,12 @@ def product_searched(request):
 
 @login_required()
 def basket(request):
-    return render(request, 'basket.html')
+    correo = get_correo(request)
+    usuario = get_usuario_correo(correo)
+    productos = usuario.comprados.all()
+    print(len(productos))
+    context = {'productos': productos}
+    return render(request, 'basket.html', context)
 
 
 @login_required()
