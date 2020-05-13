@@ -21,7 +21,6 @@
             <img src="{% static 'img/avocado.svg' %}">
             <br>
             <h1>Z A M N A</h1>
-
             <h2>Bienvenido, Santiago Bolaños Vega</h2>
         </section>
         <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 333.18,146.15 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #ffffff;"></path></svg></div>
@@ -36,11 +35,21 @@
                     <div class="box">
                         <div class="container-1">
                             <span class="icon"><i class="fa fa-search"></i></span>
-                            <input type="search" id="search" placeholder="Nombre del producto..." />
+                            <form action = "{% url 'productosLista' %}"method="GET">
+                                <input type="search" id="search" name = 'searching' placeholder="Nombre del producto..." />
+                            </form>
+
                         </div>
                     </div>
                     <br>
-                    <p>Conocer tus preferncias nos aydara a entender mejor tus hábitos de consumo y poder hacerte mejores recomendaciones</p>
+                    <p>Conocer tus preferencias nos ayudara a entender mejor tus hábitos de consumo y poder hacerte mejores recomendaciones</p>
+
+                    <ul>
+                    {%for producto in productos%}
+                        <li>{{producto.nombre}}</li>
+                    </ul>
+                    {%endfor%}
+
                 </div>
             </div>
         </section>

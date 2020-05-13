@@ -11,17 +11,18 @@ class Usuario(models.Model):
     peso = models.SmallIntegerField()
 
     # Relacion
-    productos_comprados = models.ManyToManyField('Producto', blank=True)
+    comprados = models.ManyToManyField('Producto', blank=True, related_name='comprados')
     objetivos = models.ManyToManyField('Objetivo', blank=True)
+    recomendados = models.ManyToManyField('Producto', blank=True, related_name='recomendados')
 
     def __str__(self):
         return self.nombre
 
 
 class Producto(models.Model):
-    id = models.CharField(max_length=40, primary_key=True)
     nombre = models.CharField(max_length=100)
     descripcion = models.CharField(max_length=240)
+    imagen = models.CharField(max_length=100000, default=None)
     categoria = models.ForeignKey('Categoria', on_delete=models.CASCADE)
     # Relaciones
     sustitutos = models.ManyToManyField('self', blank=True)
@@ -31,16 +32,20 @@ class Producto(models.Model):
         return self.nombre
 
 
+# clase que solo se manejara en el admin para agregar la info, no para usuarios
+
+
 class Producto_componente(models.Model):
-    id = models.CharField(max_length=40, primary_key=True)
     cantidad = models.FloatField()
     #Relaciones
     componente = models.ForeignKey('Componente', on_delete=models.CASCADE)
     producto = models.ForeignKey('Producto', on_delete=models.CASCADE)
 
 
+# clase que solo se manejara en el admin para agregar la info
+
+
 class Componente(models.Model):
-    id = models.CharField(max_length=40, primary_key=True)
     nombre = models.CharField(max_length=100)
     descripcion = models.CharField(max_length=240)
 
@@ -49,7 +54,6 @@ class Componente(models.Model):
 
 
 class Categoria(models.Model):
-    id = models.CharField(max_length=40, primary_key=True)
     nombre = models.CharField(max_length=100)
 
     def __str__(self):
@@ -58,6 +62,5 @@ class Categoria(models.Model):
 
 class Objetivo (models.Model):
     objetivo = models.CharField(max_length=200)
-
     def __str__(self):
         return self.objetivo

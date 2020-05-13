@@ -26,6 +26,7 @@ urlpatterns = [
     path('basket/', views.basket, name='basket'),
     path(r'', include('django.contrib.auth.urls')),
     path(r'', include('social_django.urls')),
+    path(r'', include('django.contrib.auth.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

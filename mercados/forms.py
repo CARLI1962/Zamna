@@ -1,8 +1,9 @@
 from django import forms
-from .models import Usuario, Producto, Categoria
+from .models import Usuario, Producto, Categoria, Objetivo
 
 
 class FirstTimeUser(forms.ModelForm):
+
 
     class Meta:
         model = Usuario
@@ -28,7 +29,7 @@ class SearchProductByName(forms.ModelForm):
 
     class Meta:
         model = Producto
-        field = [
+        fields = [
             'nombre'
         ]
         labels = {
@@ -40,7 +41,7 @@ class SearchCategoria(forms.ModelForm):
 
     class Meta:
         model = Categoria
-        field = [
+        fields = [
             'nombre'
         ]
         labels = {
