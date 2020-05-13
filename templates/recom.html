@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Canasta</title>
     <link rel="shortcut icon" href="{% static 'img/avocado.png' %}"  type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'css/stylesbasket.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stylesrecom.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&display=swap" rel="stylesheet">
 <body>
@@ -13,14 +13,14 @@
         <nav>
             <a href="#sobre-nosotros">Sobre nosotros</a>
             <a href="{% url 'profile' %}">Búsqueda</a>
-            <a href="{% url 'recom' %}">Recomendaciones</a>
+            <a href="{% url 'basket' %}">Tu canasta</a>
             <a href="/logout">Log out</a>
         </nav>
         <section class="textos-header">
 
             <img src="{% static 'img/avocado.svg' %}">
-            <h1>C A N A S T A</h1>
-            <h2>Encuentra aquí todos tus productos</h2>
+            <h1>R E C O M E N D A C I O N E S</h1>
+            <h2>Tenemos algunas sugerencias para tí</h2>
         </section>
         <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 333.18,146.15 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #ffffff;"></path></svg></div>
     </header>
@@ -28,7 +28,6 @@
 
         <section class="contenedor">
             <div align="center">
-                <!--<img class="cesta" src="{% static 'img/arriba.svg' %}">-->
                 <br>
             </div>
             <div class="clients">

@@ -30,7 +30,7 @@ header{
     height: 320px;
     background: #f79d00;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, hsla(137, 86%, 87%, 0.601), hsla(38, 100%, 48%, 0.601)), url(../img/portada.jpeg) ;  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right , hsla(137, 86%, 87%, 0.601), hsla(38, 100%, 48%, 0.601)), url(https://free4kwallpapers.com/uploads/originals/2019/09/23/night-market-bangkok-thailand-wallpaper.jpg) ; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right , hsla(137, 86%, 87%, 0.501), hsla(38, 100%, 48%, 0.501)), url(https://free4kwallpapers.com/uploads/originals/2019/09/23/night-market-bangkok-thailand-wallpaper.jpg) ; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
     position: relative;

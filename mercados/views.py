@@ -78,3 +78,7 @@ def product_searched(request):
 @login_required()
 def basket(request):
     return render(request, 'basket.html')
+
+@login_required()
+def recom(request):
+    return render(request, 'recom.html')
