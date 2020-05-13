@@ -36,11 +36,21 @@
                     <div class="box">
                         <div class="container-1">
                             <span class="icon"><i class="fa fa-search"></i></span>
-                            <input type="search" id="search" placeholder="Nombre del producto..." />
+                            <form action = "{% url 'productosLista' %}"method="GET">
+                                <input type="search" id="search" name = 'searching' placeholder="Nombre del producto..." />
+                            </form>
+
                         </div>
                     </div>
                     <br>
-                    <p>Conocer tus preferncias nos aydara a entender mejor tus hábitos de consumo y poder hacerte mejores recomendaciones</p>
+                    <p>Conocer tus preferencias nos ayudara a entender mejor tus hábitos de consumo y poder hacerte mejores recomendaciones</p>
+
+                    <ul>
+                    {%for producto in productos%}
+                        <li>{{producto.nombre}}</li>
+                    </ul>
+                    {%endfor%}
+
                 </div>
             </div>
         </section>

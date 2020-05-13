@@ -7,5 +7,11 @@ def get_all_productos():
 
 
 def get_products_by_name(name):
-    productos = Producto.objects.all().filter(nombre__icontains=name)
+    productos = Producto.objects.all().filter(nombre__istartswith=name)
     return productos
+
+
+def get_productos_sustitutos_producto(i):
+    producto = Producto.objects.all().get(id=i)
+    productos_sustitutos = producto.sustitutos.all()
+    return productos_sustitutos
